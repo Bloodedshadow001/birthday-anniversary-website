@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#771f3b">
+  <title>For my favorite person | Happy Birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="birthday-lock" id="birthday-lock" role="dialog" aria-modal="true" aria-labelledby="lock-title">
+    <div class="lock-card">
+      <span class="lock-icon" aria-hidden="true">🔒</span>
+      <p class="eyebrow lock-eyebrow"><span class="eyebrow-line"></span> A little patience</p>
+      <h2 id="lock-title">Your birthday surprise<br><em>is waiting.</em></h2>
+      <p class="lock-message">Everything is locked with love until 13 September 2026 at 12:01.</p>
+      <div class="lock-countdown" aria-label="Countdown until the birthday surprise unlocks">
+        <div class="countdown-unit"><strong id="lock-days">00</strong><span>days</span></div>
+        <div class="countdown-unit"><strong id="lock-hours">00</strong><span>hours</span></div>
+        <div class="countdown-unit"><strong id="lock-minutes">00</strong><span>minutes</span></div>
+        <div class="countdown-unit"><strong id="lock-seconds">00</strong><span>seconds</span></div>
+      </div>
+      <p class="lock-footer">Come back when the clock opens all the love ❤️</p>
+    </div>
+  </div>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="monogram" href="#top" aria-label="Back to top">A<span>&</span>S</a>
+      <p class="occasion">A little celebration for you</p>
+      <button class="sound-button" type="button" aria-label="Toggle celebration sound" aria-pressed="false">
+        <span class="sound-icon" aria-hidden="true">♪</span>
+        <span class="sound-label">Sound off</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Today is all about you</p>
+          <h1 id="hero-title">Happy birthday,<br><em>my love.</em></h1>
+          <p class="hero-intro">To the woman who makes ordinary days feel like the best days of my life.</p>
+          <div class="hero-actions">
+            <button class="primary-button" type="button" data-scroll="note">Read your note <span aria-hidden="true">&#8595;</span></button>
+            <span class="tiny-note">Made with all my heart</span>
+          </div>
+          <div class="birthday-countdown" aria-label="Countdown to 13 September 2026">
+            <p class="countdown-label">Counting down to your birthday</p>
+            <div class="countdown-grid">
+              <div class="countdown-unit"><strong id="countdown-days">00</strong><span>days</span></div>
+              <div class="countdown-unit"><strong id="countdown-hours">00</strong><span>hours</span></div>
+              <div class="countdown-unit"><strong id="countdown-minutes">00</strong><span>minutes</span></div>
+              <div class="countdown-unit"><strong id="countdown-seconds">00</strong><span>seconds</span></div>
+            </div>
+            <p class="countdown-message" id="countdown-message" aria-live="polite"></p>
+          </div>
+        </div>
+        <div class="hero-visual reveal reveal-delay" aria-label="A warm birthday scene with flowers and a candle">
+          <div class="sun-glow"></div>
+          <div class="photo-frame">
+            <div class="photo-image"></div>
+            <div class="photo-caption"><span>For you, always</span><span class="caption-heart" aria-hidden="true">&#9825;</span></div>
+          </div>
+          <div class="floating-stamp">Est.<br><strong>forever</strong></div>
+        </div>
+        <div class="scroll-cue" aria-hidden="true"><span></span> Scroll to unwrap</div>
+      </section>
+
+      <section class="quote-band" aria-label="Birthday message">
+        <p>“Some people make a room brighter just by walking into it.<br><em>You are my whole sky.</em>”</p>
+      </section>
+
+      <section class="note-section" id="note" aria-labelledby="note-title">
+        <div class="section-number">01 / 03</div>
+        <div class="note-layout">
+          <div class="note-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> A letter for you</p>
+            <h2 id="note-title">One more year<br>of <em>you.</em></h2>
+            <p class="section-aside">Tap the seal when you are ready.</p>
+          </div>
+          <div class="letter-card">
+            <div class="letter-topline"><span>September 13, 2026</span><span class="mini-star">✦</span></div>
+            <div class="sealed-note" data-note>
+              <div class="seal" aria-hidden="true"><span class="seal-initial">A</span></div>
+              <p class="seal-prompt">A birthday note, just for you</p>
+              <button class="open-note" type="button">Open the note <span aria-hidden="true">&#8594;</span></button>
+            </div>
+            <div class="letter-message" hidden>
+              <p class="anniversary-greeting">Happy birthday, Tingu ❤️</p>
+            
+              <p>My Tingu, today is your special day, and I want you to know how deeply loved, precious, and beautiful you are to me.</p>
+              <p>Ye pehle ki anniversary </p>
+              <p>Tohhhh aaj hai anniversary hmari 🤗. Aesa lgg rhaa bdeee mahino baad mnaunga bdaa ajeeb lgg rha tha. Pehle mera bdaa saara ajeeb ho gya tha aur aapka bhi.</p>
+              <p>Mujhe kuch cheeze btani hai. Pehli: me aapke liye loyal hoon. Mujhe aapke bina bdaaaa bakwas lgta hai, kisi cheez mai mnn na lgna aur baaki sbb ajeeb lgta hai.</p>
+              <p>Doosra, darkside vo jo hai vo bss ye hai ki jb mujhe pyaar nahi milta to mai doosri reality mai shift ho jata tha ki ab yhi ho skta, nahi to fall apart. Drd hona dil mai ajeeb se rehna, koi energy na hona.</p>
+              <p>Third, aap dhyan rakha kroo vee. Mtii tension ho jaati aapki. Mai hrr time aapke baare mai soch rha hota ki aap kyaa krr rhee hooge, to dhyan rakha kloo wifeeee ❣️🥺.</p>
+              <p>Nahi to baad mai khatarnak punishment doonga baby cart mai rakhunga aur bahr bhi ni niklne doonga, mtlb ussi mai hi rakhunga ya godi mai utha loonga aur car mai le jaunga khi door aur vha kisshi krunga khatarnaak aali. Ghanto ka hisab hai 😅😅.</p>
+              <p>Fourth, jb mujhe lgta ki ab mujhe daanta jaa rha, ajeeb mtlb, pr to mai kuch ni kehta. Numb type ho jaata, kuch mnn ni krta aur dil sunn type, aur literal mai saans lena bhi bnd krr deta, mtlb bhool jata kind of.</p>
+              <p>To gussa ho jaya kro prr zaayda bhi ni pleaseeeeeee baby 🥺. Mai ajeeb harkatein krta pr pyaar se smjha diya kroo. Jb aap kehte dimag kharab krr rha, tb bhi ajeeb lgta mujhe. Bssh inna chahiye hota ki aap aache shee rhoo to 🥺🥺 aur koi taqleef na ho.</p>
+              <p>Abhi tkk mera inna hi hai jo mujhe bhi inna pta hai. Baaki mai khud prr inna dhyan ni deta, aap prr zaayadaa dena pdta, chotuu baby. U are smjhee ❣️ Pyaalee shee, aur baaki zaayadaaaa hi tension ni leni hoti. Shbb ho jata ❣️</p>
+              <p>Aapko btheereee example milee hai, jaise aapne boards ki tension li thi kya hona, fir top kraa. Aur ab admission ki tension, prr oo bhi ho gyi. To inni na liya klooo ni to mummy ke saath aapko bhi black color laana pdna 🤭🤭😁😁. To nahi leni hoti inni tension shmjheee, sbb choo ho jata.</p>
+              <p>Aur me aapke paash aa jana, fir to dono mzee krenge 🤭🤭. Baaki loveeeee uuuuuuu baby mtaaaaa shaalaaaaaaaaaaaaa aul misshhhh uuuuu mtaaaaa paari 🥺🥺🥺🥺🥺 ❤️❣️</p>
+              <p>Hugeeeeeeeeeee kssshhhhh ke aur deeep aali kisshiyaan mele pyaale shundal baby ko. Aur balikee agee shee koi puthee kaam ni 🙏🏻🙏🏻. Aale emoji ni bhejne ab see ni to mai aapko ee bhej bhej krr preshan krr doonga 🥺🥺. Mujhe ni lgte aache aur fil shee.</p>
+              <p class="anniversary-close">Happyyyyy anniversaryyyyy❣️❤️🥰✨🌷💐🌟😘🥺🤭 meri bhootu kreli balike nikka munnu chotu baby Tingu jalkukdi pyaala baby. Accha munnu shundal baby ko khush rha krooo shmjheeee.</p>
+              <p class="signature">Always yours,<br><em>Your husband</em></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reasons-section" aria-labelledby="reasons-title">
+        <div class="section-number">02 / 03</div>
+        <div class="reasons-header">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Things I adore</p>
+          <h2 id="reasons-title">My favorite things<br>about <em>you.</em></h2>
+        </div>
+        <div class="reasons-grid">
+          <article class="reason"><span class="reason-number">01</span><h3>Your heart</h3><p>You care deeply, love loudly, and make everyone around you feel seen.</p></article>
+          <article class="reason reason-featured"><span class="reason-number">02</span><h3>Your laugh</h3><p>It is still my favorite sound in the world. I hope I get to hear it forever.</p></article>
+          <article class="reason"><span class="reason-number">03</span><h3>Your magic</h3><p>You make the little moments feel important. That is a rare and beautiful gift.</p></article>
+        </div>
+      </section>
+
+      <section class="wish-section" aria-labelledby="wish-title">
+        <div class="wish-orbit orbit-one"></div><div class="wish-orbit orbit-two"></div>
+        <div class="section-number light-number">03 / 03</div>
+        <p class="eyebrow light-eyebrow"><span class="eyebrow-line"></span> Make a wish</p>
+        <h2 id="wish-title">Here’s to your<br><em>next beautiful year.</em></h2>
+        <button class="wish-button" type="button">Light the candle <span aria-hidden="true">&#10024;</span></button>
+        <p class="wish-complete" aria-live="polite" hidden>Wish made. I’ll spend the year helping it come true.</p>
+      </section>
+
+      <section class="play-zone" aria-labelledby="play-title">
+        <div class="section-number">04 / 04</div>
+        <div class="play-header">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Little joys</p>
+          <h2 id="play-title">A few tiny happy<br>surprises <em>for you.</em></h2>
+        </div>
+
+        <div class="mini-games">
+          <article class="game-card">
+            <span class="game-tag">Pick one</span>
+            <h3>Pick your happy plan</h3>
+            <div class="choice-list" aria-label="Choose a birthday surprise">
+              <button class="choice-button" type="button" data-choice="Flowers">Flowers</button>
+              <button class="choice-button" type="button" data-choice="Dinner date">Dinner date</button>
+              <button class="choice-button" type="button" data-choice="Movie night">Movie night</button>
+              <button class="choice-button" type="button" data-choice="Weekend trip">Weekend trip</button>
+            </div>
+            <p class="choice-result">Pick one and I’ll actually plan it.</p>
+          </article>
+
+          <article class="game-card">
+            <span class="game-tag">Rate it</span>
+            <h3>Love meter</h3>
+            <div class="heart-row" aria-label="Love meter rating">
+              <button class="heart-button" type="button" aria-label="1 heart" data-score="1">❤</button>
+              <button class="heart-button" type="button" aria-label="2 hearts" data-score="2">❤</button>
+              <button class="heart-button" type="button" aria-label="3 hearts" data-score="3">❤</button>
+              <button class="heart-button" type="button" aria-label="4 hearts" data-score="4">❤</button>
+              <button class="heart-button" type="button" aria-label="5 hearts" data-score="5">❤</button>
+            </div>
+            <p class="love-meter-text">Love meter: 0% — tap a heart.</p>
+            <div class="game-footer">
+              <button class="game-reset love-meter-reset" type="button">Reset</button>
+            </div>
+          </article>
+
+          <article class="game-card memory-card">
+            <span class="game-tag">Match 4 pairs</span>
+            <h3>Match the hearts</h3>
+            <div class="memory-grid" aria-label="Memory matching game">
+              <button class="memory-button" type="button" data-pair="sun">❤</button>
+              <button class="memory-button" type="button" data-pair="flower">❤</button>
+              <button class="memory-button" type="button" data-pair="star">❤</button>
+              <button class="memory-button" type="button" data-pair="moon">❤</button>
+              <button class="memory-button" type="button" data-pair="sun">❤</button>
+              <button class="memory-button" type="button" data-pair="flower">❤</button>
+              <button class="memory-button" type="button" data-pair="star">❤</button>
+              <button class="memory-button" type="button" data-pair="moon">❤</button>
+            </div>
+            <p class="memory-status">Find all the matching pairs.</p>
+            <div class="memory-meta">
+              <span>Moves: <strong id="memory-moves">0</strong></span>
+              <span>Best: <strong id="memory-best">—</strong></span>
+            </div>
+            <div class="game-footer">
+              <button class="game-reset memory-reset" type="button">Shuffle & replay</button>
+            </div>
+          </article>
+
+          <article class="game-card lucky-card">
+            <span class="game-tag">Open it</span>
+            <h3>Lucky love box</h3>
+            <button class="lucky-button" type="button">Open your surprise</button>
+            <p class="lucky-result">A tiny surprise is waiting for you.</p>
+            <div class="game-footer">
+              <span class="game-count" id="lucky-count"></span>
+            </div>
+          </article>
+
+          <article class="game-card quiz-card">
+            <span class="game-tag">Guess</span>
+            <h3>My favorite thing</h3>
+            <div class="quiz-options" aria-label="Guess her favorite thing">
+              <button class="quiz-button" type="button" data-answer="Your smile">Your smile</button>
+              <button class="quiz-button" type="button" data-answer="Your kindness">Your kindness</button>
+              <button class="quiz-button" type="button" data-answer="Your laugh">Your laugh</button>
+              <button class="quiz-button" type="button" data-answer="Your love">Your love</button>
+            </div>
+            <p class="quiz-result">Choose the answer that makes my heart race.</p>
+          </article>
+
+          <article class="game-card roulette-card">
+            <span class="game-tag">Spin</span>
+            <h3>Compliment roulette</h3>
+            <button class="game-action roulette-button" type="button">Give me a compliment</button>
+            <p class="roulette-result" aria-live="polite">Press the button for a little reminder of how wonderful you are.</p>
+          </article>
+
+          <article class="game-card date-card">
+            <span class="game-tag">Spin</span>
+            <h3>Date night spinner</h3>
+            <button class="game-action date-button" type="button">Spin our next date</button>
+            <p class="date-result" aria-live="polite">A sweet plan is waiting for us.</p>
+          </article>
+
+          <article class="game-card would-card">
+            <span class="game-tag">Pick a mood</span>
+            <h3>Choose our mood</h3>
+            <div class="would-options" aria-label="Choose a date night mood">
+              <button class="would-button" type="button" data-mood="cozy">Cozy</button>
+              <button class="would-button" type="button" data-mood="playful">Playful</button>
+              <button class="would-button" type="button" data-mood="adventure">Adventure</button>
+            </div>
+            <p class="would-result" aria-live="polite">Pick a mood and I’ll bring the love.</p>
+          </article>
+
+          <article class="game-card proposal-card">
+            <span class="game-tag">Open it</span>
+            <h3>One more forever</h3>
+            <button class="proposal-box" type="button" aria-expanded="false" aria-controls="proposal-reveal">
+              <span class="box-lid" aria-hidden="true"></span>
+              <span class="box-body" aria-hidden="true"></span>
+              <span class="box-ribbon" aria-hidden="true"></span>
+              <span class="box-label">Open me</span>
+            </button>
+            <div class="proposal-reveal" id="proposal-reveal" aria-live="polite" hidden>
+              <div class="ring" aria-hidden="true">💍</div>
+              <p class="proposal-question">Will you marry me again?</p>
+              <div class="proposal-actions">
+                <button class="proposal-answer" type="button" data-answer="yes">Yes, forever</button>
+                <button class="proposal-answer" type="button" data-answer="always">Always yes</button>
+              </div>
+              <p class="proposal-result"></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="heart-unlock" aria-labelledby="heart-open-title">
+        <div class="heart-center">
+          <p class="eyebrow"><span class="eyebrow-line"></span> One more surprise</p>
+          <button class="big-heart-button" type="button" aria-label="Open love surprise" aria-pressed="false">❤</button>
+          <h2 id="heart-open-title">Tap the heart<br>to open <em>all the love.</em></h2>
+        </div>
+
+        <div class="heart-scene" aria-live="polite">
+          <div class="scene-bg"></div>
+          <div class="flower bloom flower-1">🌼</div>
+          <div class="flower bloom flower-2">🌷</div>
+          <div class="flower bloom flower-3">🌹</div>
+          <div class="sweet candy candy-1">🍬</div>
+          <div class="sweet candy candy-2">🍭</div>
+          <div class="sweet candy candy-3">🍫</div>
+          <div class="floating-heart heart-1">❤</div>
+          <div class="floating-heart heart-2">❤</div>
+          <div class="floating-heart heart-3">❤</div>
+          <div class="floating-heart heart-4">❤</div>
+          <div class="floating-heart heart-5">❤</div>
+          <div class="love-message message-1">Forever yours</div>
+          <div class="love-message message-2">You are my home</div>
+          <div class="love-message message-3">My favorite person</div>
+          <div class="love-message message-4">Love you always</div>
+          <div class="love-message message-5">Happiest birthday</div>
+          <div class="love-message message-6">Always and forever</div>
+          <div class="love-message message-7">You make life beautiful</div>
+          <div class="love-message message-8">My heart is yours and yours is mine </div>
+          <div class="love-message message-9">You are my everything mera chotu baby❤️</div>
+           <div class="love-message message-10">I love you so much meri Tingu ❤️</div>
+            <div class="love-message message-11">Aur aap khush rha krooooooooo shmjhee</div>
+        </div>
+      </section>
+
+      <section class="final-surprise" aria-labelledby="final-surprise-title">
+        <p class="eyebrow"><span class="eyebrow-line"></span> The last little surprise</p>
+        <h2 id="final-surprise-title">My birthday<br><em>surprise.</em></h2>
+        <p class="final-surprise-message">Happy birthday, Tingu ❤️ This whole little world is my surprise for you: a reminder that you are loved, celebrated, and chosen by me today and every day.</p>
+        <p class="final-surprise-signoff">With all my love, always ✨</p>
+      </section>
+
+    </main>
+
+    <footer class="footer"><span>Made for my favorite person</span><span class="footer-heart" aria-hidden="true">&#9825;</span><span>with love, always</span></footer>
+  </div>
+  <div class="confetti-container" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
