@@ -5,6 +5,7 @@ const wishButton = document.querySelector('.wish-button');
 const wishComplete = document.querySelector('.wish-complete');
 const soundButton = document.querySelector('.sound-button');
 const soundLabel = document.querySelector('.sound-label');
+const birthdayMusic = document.getElementById('birthday-music');
 const scrollButtons = document.querySelectorAll('[data-scroll]');
 
 const choiceButtons = document.querySelectorAll('.choice-button');
@@ -120,6 +121,17 @@ soundButton.addEventListener('click', () => {
   const isOn = soundButton.getAttribute('aria-pressed') === 'true';
   soundButton.setAttribute('aria-pressed', String(!isOn));
   soundLabel.textContent = isOn ? 'Sound off' : 'Sound on';
+
+  if (!isOn) {
+    birthdayMusic.volume = 0.5;
+    birthdayMusic.play().catch(() => {
+      // Some browsers block autoplay until the user interacts with the page.
+      // The button click already counts as user interaction, so playback will start normally.
+    });
+  } else {
+    birthdayMusic.pause();
+    birthdayMusic.currentTime = 0;
+  }
 });
 
 /* ---------------- Pick your happy plan ---------------- */
