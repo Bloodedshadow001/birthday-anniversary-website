@@ -37,6 +37,26 @@ const dateResult = document.querySelector('.date-result');
 const wouldButtons = document.querySelectorAll('.would-button');
 const wouldResult = document.querySelector('.would-result');
 
+const promiseButton = document.querySelector('.promise-button');
+const promiseResult = document.querySelector('.promise-result');
+const surpriseButton = document.querySelector('.surprise-button');
+const surpriseResult = document.querySelector('.surprise-result');
+const ritualButton = document.querySelector('.ritual-button');
+const ritualResult = document.querySelector('.ritual-result');
+const futureButton = document.querySelector('.future-button');
+const futureResult = document.querySelector('.future-result');
+const fortuneButton = document.querySelector('.fortune-button');
+const fortuneResult = document.querySelector('.fortune-result');
+const petButtons = document.querySelectorAll('.pet-button');
+const petResult = document.querySelector('.pet-result');
+const challengeButton = document.querySelector('.challenge-button');
+const challengeResult = document.querySelector('.challenge-result');
+const catchGameArea = document.getElementById('catch-game-area');
+const catchBasket = document.getElementById('catch-basket');
+const catchStart = document.querySelector('.catch-start');
+const catchStatus = document.querySelector('.catch-status');
+const catchMessage = document.getElementById('catch-message');
+
 const proposalBox = document.querySelector('.proposal-box');
 const proposalReveal = document.querySelector('.proposal-reveal');
 const proposalAnswers = document.querySelectorAll('.proposal-answer');
@@ -352,7 +372,9 @@ const compliments = [
   'Your laugh is still my favorite sound in the world.',
   'You bring warmth wherever you go, and I am lucky to be close to it.',
   'You make hard days feel lighter just by being in them.',
-  'You notice the little things, and that is a rare kind of love.'
+  'You notice the little things, and that is a rare kind of love.',
+  'You are the softest, sweetest, most beautiful love I have ever known.',
+  'The way you love makes my heart feel safe, full, and endlessly grateful.'
 ];
 let lastComplimentIndex = -1;
 
@@ -438,21 +460,249 @@ wouldButtons.forEach((button) => {
   });
 });
 
-/* ---------------- One more forever (proposal box) ---------------- */
-proposalBox.addEventListener('click', () => {
-  const isOpen = proposalBox.classList.toggle('open');
-  proposalBox.setAttribute('aria-expanded', String(isOpen));
-  proposalReveal.hidden = !isOpen;
-});
+/* ---------------- Extra little surprises ---------------- */
+const secretPromises = [
+  'I promise to keep choosing you, even in the quiet little moments.',
+  'I promise to make your days feel lighter, softer, and happier.',
+  'I promise to always make room for your laugh in my life.',
+  'I promise to keep loving you in the big ways and the tiny ways.',
+  'I promise to remind you every day that you are deeply loved.',
+  'I promise to keep my heart soft for you, always and forever.',
+  'I promise to love your soul, your smile, and every small part of you.'
+];
+let lastPromiseIndex = -1;
 
-proposalAnswers.forEach((button) => {
-  button.addEventListener('click', () => {
-    proposalResult.textContent = button.dataset.answer === 'yes'
-      ? 'The best answer. I choose you for every lifetime.'
-      : 'Then it\'s settled: you and me, always and forever.';
+if (promiseButton && promiseResult) {
+  promiseButton.addEventListener('click', () => {
+    let nextIndex = Math.floor(Math.random() * secretPromises.length);
+    while (secretPromises.length > 1 && nextIndex === lastPromiseIndex) {
+      nextIndex = Math.floor(Math.random() * secretPromises.length);
+    }
+    lastPromiseIndex = nextIndex;
+    promiseResult.textContent = secretPromises[nextIndex];
     createConfetti();
   });
+}
+
+const secretWishes = [
+  'My secret wish is simple: a life full of cozy evenings, your smile, and us.',
+  'My secret wish is a hundred more mornings of coffee, cuddles, and your laughter.',
+  'My secret wish is more adventures, more memories, and more reasons to stay close.',
+  'My secret wish is forever with you: warm, easy, and full of love.',
+  'My secret wish is to keep loving you in every season of life.',
+  'My secret wish is a thousand more ways to make you feel adored.'
+];
+let lastWishIndex = -1;
+
+if (surpriseButton && surpriseResult) {
+  surpriseButton.addEventListener('click', () => {
+    let nextIndex = Math.floor(Math.random() * secretWishes.length);
+    while (secretWishes.length > 1 && nextIndex === lastWishIndex) {
+      nextIndex = Math.floor(Math.random() * secretWishes.length);
+    }
+    lastWishIndex = nextIndex;
+    surpriseResult.textContent = secretWishes[nextIndex];
+    createConfetti();
+  });
+}
+
+const tinyRituals = [
+  'Tonight is for warm cuddles, soft music, and zero stress.',
+  'Our ritual for today: a little slow dance and a lot of smiling.',
+  'Let’s make today our cozy ritual: dessert, love, and a long talk.',
+  'Our favorite ritual is still just being close and laughing together.'
+];
+let lastRitualIndex = -1;
+
+if (ritualButton && ritualResult) {
+  ritualButton.addEventListener('click', () => {
+    let nextIndex = Math.floor(Math.random() * tinyRituals.length);
+    while (tinyRituals.length > 1 && nextIndex === lastRitualIndex) {
+      nextIndex = Math.floor(Math.random() * tinyRituals.length);
+    }
+    lastRitualIndex = nextIndex;
+    ritualResult.textContent = tinyRituals[nextIndex];
+    createConfetti();
+  });
+}
+
+const futureUs = [
+  'Future us: soft mornings, strong love, and never-ending little adventures.',
+  'Future us: laughing too much, holding on too tightly, and never losing each other.',
+  'Future us: a life that feels like peace, warmth, and home.',
+  'Future us: all the dreams we keep talking about, finally turning into our everyday life.'
+];
+let lastFutureIndex = -1;
+
+if (futureButton && futureResult) {
+  futureButton.addEventListener('click', () => {
+    let nextIndex = Math.floor(Math.random() * futureUs.length);
+    while (futureUs.length > 1 && nextIndex === lastFutureIndex) {
+      nextIndex = Math.floor(Math.random() * futureUs.length);
+    }
+    lastFutureIndex = nextIndex;
+    futureResult.textContent = futureUs[nextIndex];
+    createConfetti();
+  });
+}
+
+const loveFortunes = [
+  'A soft, beautiful future is waiting for you — and it includes me.',
+  'Your luck is strong today: love is already working in your favor.',
+  'The next big smile in your life is coming from somewhere very close.',
+  'Good news: your heart is about to be spoiled in the very best way.',
+  'The universe is clearly on your side today, because it gave you the love you deserve.',
+  'Your love story keeps getting more beautiful, and I hope it never stops.'
+];
+let lastFortuneIndex = -1;
+
+if (fortuneButton && fortuneResult) {
+  fortuneButton.addEventListener('click', () => {
+    let nextIndex = Math.floor(Math.random() * loveFortunes.length);
+    while (loveFortunes.length > 1 && nextIndex === lastFortuneIndex) {
+      nextIndex = Math.floor(Math.random() * loveFortunes.length);
+    }
+    lastFortuneIndex = nextIndex;
+    fortuneResult.textContent = loveFortunes[nextIndex];
+    createConfetti();
+  });
+}
+
+petButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    petButtons.forEach((item) => item.classList.remove('selected'));
+    button.classList.add('selected');
+    petResult.textContent = `Our future pet is ${button.dataset.name} — and I already know we will love them a lot.`;
+  });
 });
+
+const loveChallenges = [
+  'Challenge accepted: one full day of extra cuddles and zero stress.',
+  'Your challenge is to make each other laugh at least five times today.',
+  'The mission is a surprise coffee date and the sweetest compliments you can think of.',
+  'Challenge: plan a tiny adventure and call it our favorite memory before the night ends.'
+];
+let lastChallengeIndex = -1;
+
+if (challengeButton && challengeResult) {
+  challengeButton.addEventListener('click', () => {
+    let nextIndex = Math.floor(Math.random() * loveChallenges.length);
+    while (loveChallenges.length > 1 && nextIndex === lastChallengeIndex) {
+      nextIndex = Math.floor(Math.random() * loveChallenges.length);
+    }
+    lastChallengeIndex = nextIndex;
+    challengeResult.textContent = loveChallenges[nextIndex];
+    createConfetti();
+  });
+}
+
+let catchInterval = null;
+let catchMoveTimer = null;
+let caughtHearts = 0;
+let catchRunning = false;
+
+if (catchGameArea && catchBasket && catchStart && catchStatus && catchMessage) {
+  const moveBasket = (event) => {
+    const areaRect = catchGameArea.getBoundingClientRect();
+    const x = event.clientX - areaRect.left - 28;
+    const clampedX = Math.min(Math.max(x, 0), areaRect.width - 56);
+    catchBasket.style.left = `${clampedX}px`;
+  };
+
+  const createHeart = () => {
+    const heart = document.createElement('div');
+    heart.className = 'falling-heart';
+    heart.textContent = '❤';
+    const maxLeft = catchGameArea.clientWidth - 28;
+    heart.style.left = `${Math.random() * maxLeft}px`;
+    heart.style.top = '0px';
+    catchGameArea.appendChild(heart);
+
+    const moveHeart = () => {
+      const basketRect = catchBasket.getBoundingClientRect();
+      const heartRect = heart.getBoundingClientRect();
+      const areaRect = catchGameArea.getBoundingClientRect();
+      const currentTop = Number.parseFloat(heart.style.top) || 0;
+      const nextTop = currentTop + 4;
+      heart.style.top = `${nextTop}px`;
+
+      const overlapsBasket =
+        heartRect.bottom >= basketRect.top &&
+        heartRect.top <= basketRect.bottom &&
+        heartRect.left + heartRect.width > basketRect.left &&
+        heartRect.right - heartRect.width < basketRect.right;
+
+      if (overlapsBasket) {
+        caughtHearts += 1;
+        catchStatus.textContent = `Caught ${caughtHearts} heart${caughtHearts === 1 ? '' : 's'}!`;
+        heart.remove();
+        if (caughtHearts >= 5) {
+          clearInterval(catchInterval);
+          catchInterval = null;
+          catchRunning = false;
+          catchStatus.textContent = 'You caught all the love!';
+          catchMessage.hidden = false;
+          catchMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          createConfetti();
+        }
+        return;
+      }
+
+      if (nextTop > areaRect.height - 12) {
+        heart.remove();
+        if (caughtHearts < 5) {
+          catchStatus.textContent = 'A heart slipped away — try again!';
+        }
+        return;
+      }
+
+      requestAnimationFrame(moveHeart);
+    };
+
+    requestAnimationFrame(moveHeart);
+  };
+
+  const startCatchGame = () => {
+    if (catchRunning) return;
+    catchRunning = true;
+    caughtHearts = 0;
+    catchMessage.hidden = true;
+    catchStatus.textContent = 'Catch the hearts before they fall away.';
+    catchGameArea.querySelectorAll('.falling-heart').forEach((heart) => heart.remove());
+
+    catchInterval = window.setInterval(() => {
+      if (!catchRunning) return;
+      createHeart();
+    }, 700);
+  };
+
+  catchStart.addEventListener('click', () => {
+    startCatchGame();
+  });
+
+  catchGameArea.addEventListener('mousemove', moveBasket);
+  catchGameArea.addEventListener('touchmove', (event) => {
+    if (event.touches[0]) moveBasket(event.touches[0]);
+  }, { passive: true });
+}
+
+/* ---------------- One more forever (proposal box) ---------------- */
+if (proposalBox) {
+  proposalBox.addEventListener('click', () => {
+    const isOpen = proposalBox.classList.toggle('open');
+    proposalBox.setAttribute('aria-expanded', String(isOpen));
+    proposalReveal.hidden = !isOpen;
+  });
+
+  proposalAnswers.forEach((button) => {
+    button.addEventListener('click', () => {
+      proposalResult.textContent = button.dataset.answer === 'yes'
+        ? 'The best answer. I choose you for every lifetime.'
+        : 'Then it\'s settled: you and me, always and forever.';
+      createConfetti();
+    });
+  });
+}
 
 /* ---------------- Tap the heart to open all the love ---------------- */
 bigHeartButton.addEventListener('click', () => {
