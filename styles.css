@@ -257,6 +257,11 @@ h2 { margin-bottom: 24px; font-size: clamp(42px, 5vw, 70px); line-height: .99; }
 .love-wall-header h2 { margin: 0; }
 .love-wall-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .love-wall-item { min-height: 120px; padding: 26px 22px; border: 1px solid rgba(255,255,255,.08); background: rgba(18, 26, 38, .9); color: #e8edf7; font-family: var(--serif); font-size: 20px; line-height: 1.5; }
+.apology-section { max-width: 1240px; margin: 0 auto; padding: 0 9vw 40px; }
+.apology-card { padding: 48px 40px; border: 1px solid rgba(255,255,255,.08); background: linear-gradient(135deg, rgba(255,138,124,.1), rgba(31,44,61,.9)); text-align: center; }
+.apology-card h2 { margin-bottom: 26px; }
+.apology-message { max-width: 760px; margin: 0 auto 18px; color: #edf2fa; font-family: var(--serif); font-size: 20px; line-height: 1.8; }
+.apology-message.soft { color: #f4d4cf; }
 .final-surprise { max-width: 850px; margin: 0 auto; padding: 20px 9vw 110px; text-align: center; }
 .final-surprise .eyebrow { justify-content: center; }
 .final-surprise h2 { margin-bottom: 28px; }
